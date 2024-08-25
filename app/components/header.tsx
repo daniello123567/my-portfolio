@@ -7,7 +7,7 @@ function Header() {
     <div className='h-[3.395em] sm:top-[1em] sm:bottom-0  px-[2em] items-center justify-between flex w-max gap-x-[1em] border border-[#88868683] rounded-full fixed bottom-[2em] bg-white/50 backdrop-blur-md'>
     <p>Home</p>
      <p>About Me</p>
-     <p>Start a Project With ME!</p>
+     <p>Start a Project</p>
     </div>
 
     </div>
