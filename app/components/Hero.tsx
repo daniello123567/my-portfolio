@@ -2,10 +2,10 @@
 import React from 'react'
 import localFont from 'next/font/local'
 import Image from 'next/image'
-import { Roboto } from 'next/font/google'
+import { Montserrat,Poppins } from 'next/font/google'
 import {motion} from "framer-motion"
 const myFont = localFont({src:"./acorn.woff"});
-const robo = Roboto({weight:"700",subsets:["latin"]})
+const robo = Poppins({weight:"700",subsets:["latin"]})
 const child = {
   init:{
     y:40,
@@ -43,9 +43,9 @@ const eba = {
   }
 }
 function Hero() {
-  return (<div className={`${myFont.className}`}>
+  return (<div className={`${myFont.className} sm:mt-[1em]`}>
     <motion.div variants={Parent} initial="init" animate="anim" className={`${myFont.className} relative mt-[3em] sm:mt-[1em]  text-center font-[700] text-my-guy tracking-[-2px] w-max mx-auto`}>
-      <div className='leading-[1em] flex flex-col lg:leading-[.8em] text-[#8FDCC2]'>
+      <div className='leading-[1em] flex flex-col gap-y-[-1em] lg:leading-[.8em] text-[#8FDCC2]'>
         <motion.p variants={child}>Hi. I&apos;m Daniel.</motion.p>
          <br/>
         <motion.p variants={child}>A Frontend </motion.p><br/>
