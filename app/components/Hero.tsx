@@ -43,8 +43,8 @@ const eba = {
   }
 }
 function Hero() {
-  return (<div className={`${myFont.className} sm:mt-[1em]`}>
-    <motion.div variants={Parent} initial="init" animate="anim" className={`${myFont.className} relative mt-[3em] sm:mt-[1em]  text-center font-[700] text-my-guy tracking-[-2px] w-max mx-auto`}>
+  return (<div className={`${myFont.className} w-screen h-screen sm:mt-[3em]`}>
+    <motion.div variants={Parent} initial="init" animate="anim" className={`${myFont.className} relative sm:mt-[1em]  text-center font-[700] text-my-guy tracking-[-2px] w-max mx-auto`}>
       <div className='leading-[1em] flex flex-col gap-y-[-1em] lg:leading-[.8em] text-[#8FDCC2]'>
         <motion.p variants={child}>Hi. I&apos;m Daniel.</motion.p>
          <br/>
@@ -58,7 +58,7 @@ function Hero() {
       <Image src="/star.svg" width={500} height={300} alt='star'/>
       </div>
     </motion.div>
-    <p className={`${robo.className}  mx-auto w-[50%] lg:mt-[1.8em]  mt-[1em] text-[#D4EDE4] text-center tracking-[-.3px] text-brother-gee`}>I&apos;m dedicated to building solutions that are intuitive, inclusive, and obsessed with users delight.</p>
+    <p className={`${myFont.className}  mx-auto w-[50%] lg:mt-[1.8em]  mt-[1em] text-[#D4EDE4] text-center tracking-[-.3px] text-brother-gee`}>I&apos;m dedicated to building solutions that are intuitive, inclusive, and obsessed with users delight.</p>
     </div>
   )
 }

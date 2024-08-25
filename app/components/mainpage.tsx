@@ -3,7 +3,7 @@ import Header from './header'
 import Hero from './Hero'
 function Mainpage() {
   return (
-    <div className='bg-guy h-screen w-full'>
+    <div className='bg-guy pt-[6em] h-screen w-full'>
       <Header/>
       <Hero/>
     </div>
