@@ -1,14 +1,15 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import Loadscreen from './components/Loadscreen'
+import Loadpage from './components/loadpage'
 import Mainpage from './components/mainpage'
 function Page() {
   const [completeLoading,setCompleteloading] = useState<boolean>(false)
   useEffect(()=>{setTimeout(()=>setCompleteloading(true),3000)},[])
   return (
     <div>
-      {/* {!completeLoading?<Loadscreen/>: */}
+      {completeLoading?
       <Mainpage/>
+      :<Loadpage/>}
       </div>
   )
 }
