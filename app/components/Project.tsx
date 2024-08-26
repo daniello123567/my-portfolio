@@ -1,28 +1,62 @@
-import React from 'react'
-
-function Project() {
+"use client"
+import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
+type party = {
+  name:string,
+  toolsused:string,
+  projectduration:string,
+  arrayofimages:Array<string>,
+  overview:string,
+  description:string,
+  livelink:string,
+  github:string
+}
+function Project({name,toolsused,projectduration,arrayofimages,overview,description,livelink,github}:party) {
+const [currentIndex,setcurrentindex] = useState<number>(0);
+const handleNext = ()=>{
+  if(currentIndex!==arrayofimages.length-1){
+    setcurrentindex((prev)=>prev+1)
+  }
+}
+const handlePrev = ()=>{
+  if(currentIndex!==0){
+    setcurrentindex(prev=>prev-1);
+  }
+};
+const router = useRouter();
+const handleVisitwebsite = ()=>{
+  router.push(livelink)
+}
+const handleVisitgithub = ()=>{
+  router.push(github)
+}
   return (
-    <div className='flex lg:flex-row flex-col gap-[2em]'>
-      <div className='bg-purple-500 w-full rounded-[1.5em] h-[23.9364375em]'></div>
-      <div className='w-full justify-between p-[1.5em] flex flex-col bg-white h-[20.7em] lg:h-[23.9364375em] rounded-[1.5em]'>
-        <div className='flex text-babe3 tracking-[-0.2px] text-[1em] justify-between items-center'>
-          <p>chatter🍀</p>
-          <p>project duration: 1 month</p>
-        </div>
-        <div className='imagesoftheapp flex gap-[1em]'>
-          <div className='w-[5em] h-[5em] outline outline-2 outline-red-400 bg-purple-600 rounded'></div>
-          <div className='w-[5em] h-[5em] bg-blue-900 rounded'></div>
-          <div className='w-[5em] h-[5em] bg-blue-900 rounded'></div>
-          <div className='w-[5em] h-[5em] bg-blue-900 rounded'></div>
+    <div className='flex mt-[3em] lg:flex-row flex-col gap-[2em]'>
+      <div className='bg-purple-500 shadow-sm relative overflow-hidden w-full rounded-[1.5em] h-[23.9364375em]'>
+ <img title={name} className='w-full h-full object-cover' src={arrayofimages[currentIndex]}/>
+       <div className='absolute flex justify-between w-full top-[9em]'>
+        {currentIndex!=0?<button onClick={handlePrev} className='w-[3em] rounded-full h-[3em] bg-black text-white backdrop-blur-md' type='button'>&larr;</button>:<p></p>}
+        {currentIndex!==arrayofimages.length-1&&<button onClick={handleNext} className='w-[3em] rounded-full h-[3em] bg-black text-white backdrop-blur-md' type='button'>&rarr;</button>}
+       </div>
+      </div>
+      <div className='w-full  gap-[2em] p-[1.5em] flex flex-col bg-white h-max lg:h-[23.9364375em] rounded-[1.5em]'>
+        <div className='flex flex-wrap text-babe3 tracking-[-0.2px] text-[1em] justify-between items-center'>
+          <p>{name}|</p>
+          <p>Tools:{toolsused} |</p>
+          <p>project duration: {projectduration}</p>
         </div>
         <div>
-          <p className='text-black flex gap-[1em] text-[1.5em] tracking-[-0.9px]'>Platform For Writers
-
+          <p className='text-black flex gap-[1em] text-[1.5em] tracking-[-0.9px]'>{overview}
           </p>
-          <p className='text-babe4 tracking-tight'>Online magazine that provides the latest information on global fashion trends, events, lifestyle tips, and much more</p>
+          <p className='text-babe4 tracking-tight'>{description}</p>
 
         </div>
+        <div className='flex gap-[1em]'>
+        <button type='button' onClick={handleVisitwebsite} className='bg-slate-200 px-[.8em] rounded-full py-[.5em]'>Visit {name}</button>
+        <button type='button' onClick={handleVisitgithub} className='bg-slate-200 px-[.8em] rounded-full py-[.5em]'>View Code</button>
       </div>
+      </div>
+
     </div>
   )
 }

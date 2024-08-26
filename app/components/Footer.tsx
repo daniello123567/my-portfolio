@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Footer() {
@@ -10,9 +11,14 @@ function Footer() {
     <div>
       <div className='flex flex-col lg:flex-row items-center'>
     <p className='text-[1.0625em] mt-[1em] tracking-[-0.2px]'>This is my West African Examination Council result.</p>
-       <div className='w-full bg-white mt-[3em] h-[13em] rounded-[1.5em]'>put waec here</div>
-    <p className='text-[1.0625em] mt-[1em] tracking-[-0.2px]'>This are fellow students and this is what they have to say about some of projects</p>
-       <div className='w-full bg-white mt-[3em] h-[13em] rounded-[1.5em]'>putscreen shot here</div>
+       <div className='w-full overflow-hidden  bg-white mt-[3em] h-[13em] rounded-[1.5em]'>
+        <Image className='w-full h-full' width={500} height={300} alt='my waec result' src="/waec.jpg"/>
+       </div>
+    <p className='text-[1.0625em] mt-[1em] tracking-[-0.2px]'>This are fellow students and this is what they have to say about some of my projects</p>
+       <div className='w-full overflow-hidden object-cover bg-white mt-[3em] h-[13em] rounded-[1.5em]'><Image className='w-full object-right-bottom object-cover h-full' width={500} height={300} alt='my waec result' src="/tes.PNG"/>
+       </div>
+       <div className='w-full overflow-hidden object-cover bg-white mt-[3em] h-[13em] rounded-[1.5em]'><Image className='w-full object-cover h-full' width={500} height={300} alt='my waec result' src="/tes2.PNG"/>
+</div>
        </div>
     </div>
     </div>
