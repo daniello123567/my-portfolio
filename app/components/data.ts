@@ -1,6 +1,6 @@
 
 const data:Array<jesus>= [{
-  Description:"chatter is a revolutionary writing website designed specifically for writers & readers. This innovative app helps writers streamline their creative process, stay organized, and produce high-quality content with ease. where readers can then easily take off",
+  Description:"chatter is a revolutionary writing website designed specifically for writers & readers. where readers can then easily take off",
   Name: "chatter✨",
   Overview: "chatter is a haven for writers.",
   Projectduration: "1 month",
@@ -11,7 +11,7 @@ const data:Array<jesus>= [{
   live_link: "https://chatter-six-kappa.vercel.app/"
 },
 {
-  Description:"Imagine being able to try on your dream jewelry from the comfort of your own home, without having to physically visit a store. cuban case makes it possible! this innovative web app uses augmented reality technology to let you virtually try on a wide range of jewelry pieces, from elegant earrings to stunning statement necklaces.",
+  Description:"Imagine being able to try on your dream jewelry from the comfort of your own home, without having to physically visit a store.This innovative web app uses augmented reality technology to let you virtually try on jewelry pieces.",
   Name:"cuban case😎",
   Overview:"Try Before You Buy with cuban case",
   Projectduration:"1 week",
