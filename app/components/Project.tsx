@@ -32,7 +32,7 @@ const handleVisitgithub = ()=>{
 }
   return (
     <div className='flex mt-[3em] lg:flex-row flex-col gap-[2em]'>
-      <div className='bg-purple-500 shadow-sm relative overflow-hidden w-full rounded-[1.5em] h-[23.9364375em]'>
+      <div className='bg-purple-500  border-gray-300 border-spacing-2 border-2 shadow-sm relative overflow-hidden w-full rounded-[1.5em] h-[23.9364375em]'>
  <img title={name} className='w-full h-full object-cover' src={arrayofimages[currentIndex]}/>
        <div className='absolute flex justify-between w-full top-[9em]'>
         {currentIndex!=0?<button onClick={handlePrev} className='w-[3em] rounded-full h-[3em] bg-black text-white backdrop-blur-md' type='button'>&larr;</button>:<p></p>}
@@ -41,8 +41,8 @@ const handleVisitgithub = ()=>{
       </div>
       <div className='w-full  gap-[2em] p-[1.5em] flex flex-col bg-white h-max lg:h-[23.9364375em] rounded-[1.5em]'>
         <div className='flex flex-wrap text-babe3 tracking-[-0.2px] text-[1em] justify-between items-center'>
-          <p className='font-bold'>{name}|</p>
-          <p className='text-wrap'>Tech used:{toolsused}|</p>
+          <p className='font-bold'>{name}</p>
+          <p className='text-wrap'>Tech used:<br/>{toolsused}</p>
           <p>project duration: {projectduration}</p>
         </div>
         <div>
