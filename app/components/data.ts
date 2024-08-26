@@ -4,7 +4,7 @@ const data:Array<jesus>= [{
   Name: "chatter✨",
   Overview: "chatter is a haven for writers.",
   Projectduration: "1 month",
-  Toolsused: "supabase,clerk,Typescript,Nextjs,tailwind",
+  Toolsused: "supabase,clerk,Nextjs,tailwind",
   github_link: "https://github.com/daniello123567/CHATTER",
   id: 1,
   images: ["/chatter1.png","/chatter2.png","/chatter3.png","/chatter4.png"],
