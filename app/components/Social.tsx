@@ -33,7 +33,7 @@ function Social() {
       <p className='text-[2.25em] tracking-[-1.4px] md:text-[3.0625em] lg:text-[4.125em] text-center mt-[1.5em]'>Some Tools I use.</p>
     <div className='w-full justify-center lg:gap-x-[2em] lg:mt-[2em] mt-[1em] lg:flex-row items-center gap-[1em] flex flex-wrap'>
       {Mytools.map((tools:Tool)=>{
-        return <Tool name={tools.name} src={tools.src}/>
+        return <Tool key={tools.name} name={tools.name} src={tools.src}/>
       })}..ETC
     </div>
     </div>
