@@ -6,7 +6,7 @@ function Page() {
   const [completeLoading,setCompleteloading] = useState<boolean>(false)
   useEffect(()=>{setTimeout(()=>setCompleteloading(true),3000)},[])
   return (
-    <div>
+    <div className=''>
       {completeLoading?
       <Mainpage/>
       :<Loadpage/>}

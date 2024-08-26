@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Manrope } from 'next/font/google'
+const man = Manrope({weight:"500",subsets:["latin"]})
 
 
 export default function RootLayout({
@@ -12,7 +11,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${man.className} bg-[#EEEEF2]`}>{children}</body>
     </html>
   );
 }
