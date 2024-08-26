@@ -42,7 +42,7 @@ const handleVisitgithub = ()=>{
       <div className='w-full  gap-[2em] p-[1.5em] flex flex-col bg-white h-max lg:h-[23.9364375em] rounded-[1.5em]'>
         <div className='flex flex-wrap text-babe3 tracking-[-0.2px] text-[1em] justify-between items-center'>
           <p>{name}|</p>
-          <p>Tools:{toolsused} |</p>
+          <p className='text-wrap'>Tech used:{toolsused}|</p>
           <p>project duration: {projectduration}</p>
         </div>
         <div>
