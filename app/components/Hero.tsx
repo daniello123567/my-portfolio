@@ -19,7 +19,7 @@ const bro = {
 }
 function Hero() {
   return (
-    <motion.div variants={bro} initial="init" animate="anim" className={`${man.className} xl:w-[70em] p-[2.875em] text-babe2 text-center w-[100%] h-max rounded-[1.5em] mx-auto bg-white`}>
+    <motion.div variants={bro} initial="init" animate="anim" className={`${man.className} home xl:w-[70em] p-[2.875em] text-babe2 text-center w-[100%] h-max rounded-[1.5em] mx-auto bg-white`}>
      <p className='text-[1.5em]  text-babe2 tracking-tight'>Hello, i&apos;m Daniel</p>
      <h1 className='text-[3.375em] md:text-[4em] mt-[1em]  mb-[1em] md:leading-[70px] lg:text-[6em]  lg:leading-[90px] lg:mt-0 tracking-[-3px] leading-[59.4px]'>I develop digital products balancing users wants and company goals.</h1>
      <p className='text-[1.5em] mt-[1em]  text-babe2 tracking-tight'>I&apos;m a <strong>Frontend Developer</strong>. I code digital experiences prioritizing users and strategic fit</p>

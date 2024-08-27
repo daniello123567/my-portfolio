@@ -31,9 +31,10 @@ export default function Mygee(){
   const [works,setworks] = useState<HTMLElement|null>()
   useEffect(()=>{
     const home:HTMLElement|null = window.document.querySelector('.home');
-    const aboutme:HTMLElement|null = window.document.querySelector('.aboutme')
-    const tools:HTMLElement|null = window.document.querySelector('.tools')
-    const works:HTMLElement|null = window.document.querySelector('.works')
+    const aboutme:HTMLElement|null = window.document.querySelector('.aboutme');
+    const tools:HTMLElement|null = window.document.querySelector('.tools');
+    const works:HTMLElement|null = window.document.querySelector('.works');
+    sethome(home);setaboutme(aboutme),setools(tools);setworks(works)
   },[])
 
   const [open,setOpen] = useState<any>(false);
