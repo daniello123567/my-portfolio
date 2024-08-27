@@ -3,7 +3,6 @@ import Header from './header'
 import Hero from './Hero'
 import Social from './Social'
 import Works from './Works'
-import Project from './Project'
 import Footer from './Footer'
 import Aboutme from './Aboutme'
 function Mainpage() {

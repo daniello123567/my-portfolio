@@ -1,9 +1,24 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
-
+import {motion} from "framer-motion"
+const bro = {
+  init:{
+    y:-120,
+    opacity:0
+  },
+  anim:{
+    y:0,
+    opacity:1,
+    transition:{
+      delay:0.5,
+      duration:1
+    }
+  }
+}
 function Footer() {
   return (
-    <div className='w-full text-center pt-[3em] px-[1.5em] pb-[1.5em] mt-[2em] h-[max-content] text-white bg-babe2 rounded-[1.5em]'>
+    <motion.div viewport={{once:true}} variants={bro} initial="init" whileInView="anim" className='w-full text-center pt-[3em] px-[1.5em] pb-[1.5em] mt-[2em] h-[max-content] text-white bg-babe2 rounded-[1.5em]'>
       <div className='flex flex-col gap-[2em]'><p className='text-[2.25em] tracking-[-1.4px] leading-[43.2px]'>Ready to collaborate?</p>
       <p className='text-[1.0625em] tracking-[-0.2px]'>Let&apos;s Drop Your Idea here💌</p>
     <p className=' text-wrap underline'>danieladetaiwoeniola@gmail.com</p>
@@ -21,7 +36,7 @@ function Footer() {
 </div>
        </div>
     </div>
-    </div>
+    </motion.div>
   )
 }
 

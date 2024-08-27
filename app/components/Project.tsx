@@ -1,6 +1,7 @@
 "use client"
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
+import {motion} from "framer-motion"
 type party = {
   name:string,
   toolsused:string,
@@ -10,6 +11,20 @@ type party = {
   description:string,
   livelink:string,
   github:string
+}
+const bro = {
+  init:{
+    y:-120,
+    opacity:0
+  },
+  anim:{
+    y:0,
+    opacity:1,
+    transition:{
+      delay:0.5,
+      duration:1
+    }
+  }
 }
 function Project({name,toolsused,projectduration,arrayofimages,overview,description,livelink,github}:party) {
 const [currentIndex,setcurrentindex] = useState<number>(0);
@@ -31,7 +46,7 @@ const handleVisitgithub = ()=>{
   router.push(github)
 }
   return (
-    <div className='flex mt-[3em] lg:flex-row flex-col gap-[2em]'>
+    <motion.div variants={bro} viewport={{once:true}} initial="init" whileInView="anim" className='flex mt-[3em] lg:flex-row flex-col gap-[2em]'>
       <div className='bg-purple-500  border-gray-300 border-spacing-2 border-2 shadow-sm relative overflow-hidden w-full rounded-[1.5em] h-[23.9364375em]'>
  <img title={name} className='w-full h-full object-cover' src={arrayofimages[currentIndex]}/>
        <div className='absolute flex justify-between w-full top-[9em]'>
@@ -57,7 +72,7 @@ const handleVisitgithub = ()=>{
       </div>
       </div>
 
-    </div>
+    </motion.div>
   )
 }
 

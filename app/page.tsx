@@ -7,9 +7,9 @@ function Page() {
   useEffect(()=>{setTimeout(()=>setCompleteloading(true),3000)},[])
   return (
     <div className=''>
-      {completeLoading?
+      {/* {completeLoading? */}
       <Mainpage/>
-      :<Loadpage/>}
+      {/* :<Loadpage/>} */}
       </div>
   )
 }
