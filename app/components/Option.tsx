@@ -25,7 +25,7 @@ export default function Option({
   setOpen,
   elementtoscrollintoview
 }: {
-  elementtoscrollintoview:HTMLElement|null,
+  elementtoscrollintoview:HTMLElement|null|undefined,
   text: string;
   Icon?: any;
   setOpen?: any;
