@@ -11,6 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+      <meta name="google-site-verification" content="xQ0QIZu18c6Mj-uTvn3f6fWwBLEto6Y8HW5ZEtr0Wfw" />
+      </head>
       <body className={`${man.className} bg-[#EEEEF2]`}>{children}</body>
     </html>
   );
