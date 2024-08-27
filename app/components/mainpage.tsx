@@ -11,8 +11,8 @@ function Mainpage() {
     <div className='px-[1em] pt-[8em]  h-screen w-full'>
     <Header/>
     <Hero/>
-    <Aboutme/>
     <Social/>
+    <Aboutme/>
     <Works/>
     <Footer/>
     </div>
