@@ -3,7 +3,10 @@ import "./globals.css";
 import { Manrope } from 'next/font/google'
 const man = Manrope({weight:"500",subsets:["latin"]})
 
-
+export const metadata:Metadata = {
+ title:"Daniel |",
+ description:"Hi, i'm a frontend developer based in Lagos,Nigeria"
+}
 export default function RootLayout({
   children,
 }: Readonly<{
