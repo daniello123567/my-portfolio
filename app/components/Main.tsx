@@ -173,7 +173,7 @@ function Main() {
     <div className={` font-Neu pt-[1em] w-full  min-h-[100vh]`}>
       <Header />
       <Introduction />
-      <div className='w-[90%] mt-[1em] border-b border-l border-r mx-auto h-[20em]'>
+      <div className='w-[90%] mt-[1em] border-b border-l border-r mx-auto lg:w-[25em] lg:h-[20em] md:h-[40em] h-[20em]'>
       <Image className='w-full h-full object-cover' width={500} src="https://exicdyotqvcyfyetovtv.supabase.co/storage/v1/object/public/images/Screenshot%202024-11-12%20at%2013-16-54%20AltSchool%20Africa%20Certificate%20-%20Adetaiwo%20219%20.pdf.png?t=2024-11-12T12%3A17%3A17.801Z" height={500} alt='certificate'/>
       </div>
       <Hero />
