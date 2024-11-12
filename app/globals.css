@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: geaugu;
+  src: url('https://fonts.gstatic.com/s/gaegu/v17/TuGSUVB6Up9NU573jsw86MY.woff2');
+}
+@font-face {
+  font-family: Neu;
+  src: url('https://cdn.prod.website-files.com/660450a4a9bd743720b9e518/660d5577dbf00cc3c6b628fa_NeueMontreal-Regular.otf');
+}

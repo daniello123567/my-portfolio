@@ -1,23 +1,19 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Manrope } from 'next/font/google'
-const man = Manrope({weight:"500",subsets:["latin"]})
-export const metadata:Metadata = {
-  title:"Daniel - Programmer",
-  description:"Hi, i'm a frontend developer based in Lagos,Nigeria"
+import './globals.css'
+export const metadata = {
+  title: 'Frontend Developer | Daniel Eniola',
+  description: "Hi i'm daniel, A frontend developer proefficient in React,Javacript..etc",
+  icons:'https://exicdyotqvcyfyetovtv.supabase.co/storage/v1/object/public/images/WhatsApp%20Image%202024-11-12%20at%201.28.39%20PM.jpeg?t=2024-11-12T12%3A36%3A37.336Z'
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <head>
-      <meta name="google-site-verification" content="xQ0QIZu18c6Mj-uTvn3f6fWwBLEto6Y8HW5ZEtr0Wfw" />
-            </head>
-      <body className={`${man.className} bg-[#EEEEF2]`}>{children}</body>
+      <body className='bg-[#eff3eb69]'>{children}</body>
     </html>
-  );
+  )
 }
+// bg-[#eff3eb] former background color inc

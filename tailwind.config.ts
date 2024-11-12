@@ -8,42 +8,52 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      boxShadow:{
-        'bro':"0 4px 29px rgba(0, 0, 0, 0.08)"
+      fontFamily:{
+        geaugu:['geaugu','sans-serif'],
+        Neu:['Neu','sans-serif']
       },
-      colors:{
-        myBabe:'hsla(158, 23%, 18%, 0.7)',
-        babe2:"rgb(3, 7, 18)",
-        babe3:"rgb(55, 65, 81)",
-        "babe4":"rgb(55, 65, 81)",
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
-      fontSize:{
-        'my-guy': 'clamp(3.2rem, .5692rem + 8.238vw, 13.75rem);',
-        "brother-gee":"clamp(1rem, .8852rem + .4898vw, 1.375rem)"
+      keyframes:{
+        blink:{
+          '0%':{"background-color":'red'},
+          '50%':{"background-color":'white'},
+          '100%':{"background-color":'red'},
+        },
+        marque:{
+          '0%': { transform: 'translateX(100%)', opacity: '1' },
+
+          '90%': { opacity: '1' },
+
+          '100%': { transform: 'translateX(-90%)', opacity: '0' }
+        },
+
       },
-      backgroundImage: {
-        "small-screen":"linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "babe":"linear-gradient(114.3deg, #137E39 0.2%, #08415B 68.5%)",
-        "guy":"radial-gradient(at 10.945907584141779% 90.51953300416784%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 1) 0%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 0) 100%), radial-gradient(at 65.88701274259623% 11.106780562389474%, hsla(230.96234309623432, 97.55102040816327%, 48.0392156862745%, 1) 0%, hsla(230.96234309623432, 97.55102040816327%, 48.0392156862745%, 0) 100%), radial-gradient(at 28.709603843524146% 55.99612551660385%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 1) 0%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 0) 100%), radial-gradient(at 99.7519368640428% 53.4780517062232%, hsla(230.96234309623432, 97.55102040816327%, 48.0392156862745%, 1) 0%, hsla(230.96234309623432, 97.55102040816327%, 48.0392156862745%, 0) 100%), radial-gradient(at 52.12881136784482% 12.418780358437198%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 1) 0%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 0) 100%), radial-gradient(at 87.45088444604845% 30.581489903061776%, hsla(230.96234309623432, 97.55102040816327%, 48.0392156862745%, 1) 0%, hsla(230.96234309623432, 97.55102040816327%, 48.0392156862745%, 0) 100%), radial-gradient(at 70.89264398669586% 91.88565802176876%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 1) 0%, hsla(321.0878661087866, 97.55102040816327%, 48.0392156862745%, 0) 100%)",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    keyframes:{
-       blinkingBg:{
-        "0%":{backgroundColor:"#FFF685"},
-        "20%":{backgroundColor:"#0049B7"},
-        "40%":{backgroundColor:"#f95d9b"},
-        "60%":{backgroundColor:"#ff414e"},
-        "80%":{backgroundColor:"pink"},
-        "100%":{backgroundColor:"#007f4f"},
-       }
-    },
     animation:{
-      blinkerbg:'blinkingBg 4s ease-in-out infinite'
-    },
+      'error':'blink 2s linear infinite',
+      'marque':'marque 10s linear infinite'
+    }
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /bg-(red|orange|pink|rose|fuchsia|purple|violet|indigo|blue|sky|cyan|teal|emerald|green|lime|yellow|amber|stone|neutral|zinc|gray|slate)-(50|100|200|300|400|500|600|700|800|900|950)/,
+    },{
+      pattern: /from-(red|orange|pink|rose|fuchsia|purple|violet|indigo|blue|sky|cyan|teal|emerald|green|lime|yellow|amber|stone|neutral|zinc|gray|slate)-(50|100|200|300|400|500|600|700|800|900|950)/,
+    },
+    {
+      pattern: /via-(red|orange|pink|rose|fuchsia|purple|violet|indigo|blue|sky|cyan|teal|emerald|green|lime|yellow|amber|stone|neutral|zinc|gray|slate)-(50|100|200|300|400|500|600|700|800|900|950)/,
+    },
+    {
+      pattern: /to-(red|orange|pink|rose|fuchsia|purple|violet|indigo|blue|sky|cyan|teal|emerald|green|lime|yellow|amber|stone|neutral|zinc|gray|slate)-(50|100|200|300|400|500|600|700|800|900|950)/,
+    },
+    {
+      pattern: /bg-gradient-to-(t|tt|tr|r|br|b|bl|l|tl)/,
+    },
+  ],
+
 };
 export default config;
